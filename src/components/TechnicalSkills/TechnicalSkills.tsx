@@ -1,8 +1,7 @@
-'use client';
 import { motion, useAnimation, useInView, Variants } from 'framer-motion';
 import Image from 'next/image';
 import { useEffect, useRef } from 'react';
-import styles from './Skills.module.scss';
+import styles from './TechnicalSkills.module.css';
 
 // TODO : js, graphql, ionic
 
@@ -59,7 +58,7 @@ const createVariants = (index: number): Variants => ({
   },
 });
 
-export const Skills = () => {
+export const TechnicalSkills = () => {
   const controls = useAnimation();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });

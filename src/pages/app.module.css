@@ -1,3 +1,9 @@
+.body {
+  display: grid;
+  grid-template-columns: 1fr 11fr;
+  height: 100vh;
+}
+
 .main {
   display: flex;
   flex-direction: column;
