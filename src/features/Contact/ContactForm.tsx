@@ -1,7 +1,8 @@
+import { Button } from '@/components/Button';
+import axios from 'axios';
 import React from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { BiSolidSend } from 'react-icons/bi';
-import { Button } from '../Button';
 import styles from './Contact.module.css';
 
 // TODO : focus styles across app
@@ -22,19 +23,10 @@ export const ContactForm: React.FC = () => {
 
   const onSubmit: SubmitHandler<FormInputs> = async (data) => {
     try {
-      // TODO : implement this route
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      });
-
-      if (response.ok) {
-        // TODO : Show toast
-        reset();
-      }
+      const response = await axios.post('/api/contact', data);
+      // TODO : Show success toast
+      console.log(response.data);
+      reset();
     } catch (error) {
       // TODO : Show error toast
     }

@@ -13,6 +13,8 @@ export const Contact = () => {
       </p>
 
       <ContactForm />
+
+      {/* TODO : general contact details : display side by side with form on desktop */}
     </section>
   );
 };
