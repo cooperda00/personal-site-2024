@@ -6,6 +6,7 @@ export const ExperienceFrontmatterSchema = z.object({
   endDate: z.string(),
   role: z.string(),
   url: z.string().url(),
+  imagePath: z.string(),
 });
 
 export type ExperienceFrontmatter = z.infer<typeof ExperienceFrontmatterSchema>;

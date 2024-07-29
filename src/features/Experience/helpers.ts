@@ -5,7 +5,9 @@ import { ExperienceFrontmatterSchema, ExperienceMarkdown } from './types';
 
 export const loadExperience = () => {
   const experienceDirectory = join(process.cwd(), 'public/experience');
-  const filenames = fs.readdirSync(experienceDirectory);
+  const filenames = fs
+    .readdirSync(experienceDirectory)
+    .filter((filename) => filename.endsWith('.md'));
 
   const experience: ExperienceMarkdown[] = filenames.map((filename) => {
     const filePath = join(experienceDirectory, filename);
