@@ -1,0 +1,53 @@
+.contact {
+  width: 100%;
+  max-width: var(--max-content-width);
+  padding: 2rem;
+}
+
+.heading {
+  font-size: var(--font-size-XL);
+  padding-bottom: 1rem;
+}
+
+.paragraph {
+  font-size: var(--font-size-SM);
+  padding-bottom: 2rem;
+  max-width: 80ch;
+}
+
+.formContainer {
+  max-width: 60rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.formField {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.formField label {
+  font-weight: bold;
+  font-size: var(--font-size-S);
+}
+
+.formField input,
+.formField textarea {
+  padding: 1rem;
+  border: 1px solid var(--palette-gray-3);
+  border-radius: 0.4rem;
+  font-size: var(--font-size-S);
+  margin-bottom: 3rem;
+}
+
+.error {
+  position: absolute;
+  bottom: 0.5rem;
+  color: var(--palette-error);
+  font-size: var(--font-size-XS);
+}
