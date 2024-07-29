@@ -1,6 +1,5 @@
-import React from 'react';
-import styles from './Sidebar.module.css';
 import { IoMdDownload } from 'react-icons/io';
+import styles from './Sidebar.module.css';
 
 const anchorLinks = [
   { href: '/#experience', label: 'Experience' },
@@ -12,7 +11,7 @@ export const Navigation = () => {
   return (
     <ul className={styles.navigation}>
       {anchorLinks.map(({ href, label }) => (
-        <li>
+        <li key={label}>
           <a href={href} className={styles.navItem}>
             {label}
           </a>
