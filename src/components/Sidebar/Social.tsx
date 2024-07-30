@@ -1,4 +1,3 @@
-import React from 'react';
 import { IoLogoGithub, IoLogoLinkedin } from 'react-icons/io';
 import styles from './Sidebar.module.css';
 

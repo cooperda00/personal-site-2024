@@ -1,7 +1,7 @@
 ---
 title: Clinchd
-startDate: January 2022
-endDate: January 2023
+startDate: 2022-01-01
+endDate: 2023-01-28
 role: Developer
 url: https://clinchd.com
 imagePath: '/experience/clinchd_logo.svg'

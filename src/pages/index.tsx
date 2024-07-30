@@ -15,9 +15,9 @@ export default function Home({ experience }: Props) {
     <>
       <Metadata />
       <div className={styles.content} id="home">
-        <Contact />
-        <TechnicalSkills />
         <Experience experience={experience} />
+        <TechnicalSkills />
+        <Contact />
       </div>
     </>
   );

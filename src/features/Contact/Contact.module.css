@@ -4,19 +4,26 @@
   padding: 2rem;
 }
 
-.heading {
+.contact > h2 {
   font-size: var(--font-size-XL);
   padding-bottom: 1rem;
 }
 
-.paragraph {
+.contact > p {
   font-size: var(--font-size-SM);
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
   max-width: 80ch;
 }
 
-.formContainer {
-  max-width: 60rem;
+.contact > p:last-of-type {
+  padding-bottom: 2rem;
+}
+
+.container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
 }
 
 .form {
@@ -50,4 +57,21 @@
   bottom: 0.5rem;
   color: var(--palette-error);
   font-size: var(--font-size-XS);
+}
+
+.contactDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.detail {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: var(--font-size-SM);
+}
+
+.detail span {
+  text-decoration: underline;
 }

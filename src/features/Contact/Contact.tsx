@@ -1,20 +1,27 @@
 import styles from './Contact.module.css';
+import { ContactDetails } from './ContactDetails';
 import { ContactForm } from './ContactForm';
 
 export const Contact = () => {
   return (
     <section id="contact" className={styles.contact}>
-      <h2 className={styles.heading}>Contact</h2>
+      <h2>Contact</h2>
 
-      <p className={styles.paragraph}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem corporis ab velit officiis
-        quasi sed consequuntur itaque quaerat! Corrupti sapiente, eaque hic maiores expedita
-        perspiciatis consequuntur magnam repellat mollitia minus?
+      <p>
+        {`I'm open to discussing new opportunities, exciting projects, or connecting with fellow tech
+        professionals.`}
       </p>
 
-      <ContactForm />
+      <p>
+        {`Whether you have a job opening, a project idea, or just want to chat about web development,
+        I'd love to hear from you. Feel free to use the form below or reach out via my professional
+        profiles`}
+      </p>
 
-      {/* TODO : general contact details : display side by side with form on desktop */}
+      <div className={styles.container}>
+        <ContactForm />
+        <ContactDetails />
+      </div>
     </section>
   );
 };

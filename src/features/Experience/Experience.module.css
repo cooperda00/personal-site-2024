@@ -1,6 +1,66 @@
 .experience {
-  height: 150rem;
-  background-color: aliceblue;
   width: 100%;
   max-width: var(--max-content-width);
+}
+
+.experience > h2 {
+  font-size: var(--font-size-XL);
+  padding-bottom: 1rem;
+}
+
+.experience > p {
+  font-size: var(--font-size-SM);
+  padding-bottom: 1rem;
+  max-width: 80ch;
+}
+
+.experience p:last-of-type {
+  padding-bottom: 2rem;
+}
+
+.experienceContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.experienceCard {
+  width: 100%;
+  background-color: var(--palette-gray-1);
+  padding: 2rem;
+  border-radius: 0.4rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 5rem;
+}
+
+.experienceCard h2 {
+  font-size: var(--font-size-L);
+}
+
+.experienceCard a {
+  text-decoration: underline;
+}
+
+.experienceCard .role {
+  font-size: var(--font-size-SM);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1.6rem;
+}
+
+.experienceCard h3 {
+  font-size: var(--font-size-S);
+  padding-bottom: 0.8rem;
+}
+
+.experienceCard p,
+.experienceCard li {
+  font-size: var(--font-size-S);
+  padding-bottom: 0.4rem;
+}
+
+.experienceCard ul {
+  list-style: outside;
 }

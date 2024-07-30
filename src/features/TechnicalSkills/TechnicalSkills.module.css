@@ -4,15 +4,19 @@
   padding: 2rem;
 }
 
-.heading {
+.skills > h2 {
   font-size: var(--font-size-XL);
   padding-bottom: 1rem;
 }
 
-.paragraph {
+.skills > p {
   font-size: var(--font-size-SM);
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
   max-width: 80ch;
+}
+
+.skills > p:last-of-type {
+  padding-bottom: 2rem;
 }
 
 .cardContainer {

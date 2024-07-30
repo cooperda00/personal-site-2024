@@ -1,7 +1,7 @@
 ---
 title: EHAB (Ehabitation Ltd.)
-startDate: June 2020
-endDate: January 2022
+startDate: 2020-06-01
+endDate: 2022-01-28
 role: Front-end Developer
 url: https://ehab.co
 imagePath: '/experience/ehab_logo.svg'

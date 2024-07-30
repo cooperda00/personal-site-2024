@@ -1,13 +1,13 @@
 ---
 title: Modlify
-startDate: February 2023
-endDate: Present
+startDate: 2023-02-01
+endDate: 2024-07-30
 role: Senior Developer
 url: https://modlify.io
 imagePath: '/experience/modlify_logo.svg'
 ---
 
-_N.B. Modlify and Clinchd are two different products from the same business as a result of a pivot in early 2023._
+&nbsp; _N.B. Modlify and Clinchd are two different products from the same business as a result of a pivot in early 2023._
 
 ### Project Overview
 

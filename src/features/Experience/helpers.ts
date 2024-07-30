@@ -1,15 +1,18 @@
+import dayjs from 'dayjs';
 import fs from 'fs';
 import matter from 'gray-matter';
+import { orderBy } from 'lodash';
 import { join } from 'path';
-import { ExperienceFrontmatterSchema, ExperienceMarkdown } from './types';
+import { ExperienceFrontmatterSchema } from './types';
 
 export const loadExperience = () => {
   const experienceDirectory = join(process.cwd(), 'public/experience');
+
   const filenames = fs
     .readdirSync(experienceDirectory)
     .filter((filename) => filename.endsWith('.md'));
 
-  const experience: ExperienceMarkdown[] = filenames.map((filename) => {
+  const experience = filenames.map((filename) => {
     const filePath = join(experienceDirectory, filename);
     const fileContents = fs.readFileSync(filePath, 'utf8');
 
@@ -19,9 +22,13 @@ export const loadExperience = () => {
 
     return {
       md,
-      frontmatter,
+      frontmatter: {
+        ...frontmatter,
+        startDate: dayjs(frontmatter.startDate).toISOString(),
+        endDate: frontmatter.endDate ? dayjs(frontmatter.endDate).toISOString() : null,
+      },
     };
   });
 
-  return experience;
+  return orderBy(experience, 'frontmatter.startDate', 'desc');
 };
