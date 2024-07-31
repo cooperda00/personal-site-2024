@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { IoMdDownload } from 'react-icons/io';
 import styles from './Sidebar.module.css';
 
@@ -12,9 +13,9 @@ export const Navigation = () => {
     <ul className={styles.navigation}>
       {anchorLinks.map(({ href, label }) => (
         <li key={label}>
-          <a href={href} className={styles.navItem}>
+          <Link href={href} className={styles.navItem}>
             {label}
-          </a>
+          </Link>
         </li>
       ))}
 
