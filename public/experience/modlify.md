@@ -7,7 +7,7 @@ url: https://modlify.io
 imagePath: '/experience/modlify_logo.svg'
 ---
 
-&nbsp; _N.B. Modlify and Clinchd are two different products from the same business as a result of a pivot in early 2023._
+_N.B. Modlify and Clinchd are two different products from the same business as a result of a pivot in early 2023._
 
 ### Project Overview
 
