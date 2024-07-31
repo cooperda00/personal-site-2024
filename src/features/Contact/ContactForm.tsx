@@ -11,6 +11,7 @@ type FormInputs = {
   name: string;
   email: string;
   message: string;
+  phoneNumber: string;
 };
 
 export const ContactForm: React.FC = () => {
@@ -70,6 +71,20 @@ export const ContactForm: React.FC = () => {
           rows={4}
         />
         {errors.message && <span className={styles.error}>{errors.message.message}</span>}
+      </div>
+
+      {/* Honeypot */}
+      <div className={styles.honeypot} aria-hidden="true">
+        <label htmlFor="phoneNumber" style={{ display: 'none' }}>
+          Phone Number
+        </label>
+        <input
+          id="phoneNumber"
+          type="text"
+          {...register('phoneNumber')}
+          tabIndex={-1}
+          autoComplete="off"
+        />
       </div>
 
       <Button type="submit" icon={<BiSolidSend />} variant="secondary">
