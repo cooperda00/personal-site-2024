@@ -1,6 +1,7 @@
 import { Button } from '@/components/Button';
+import { Toast, ToastContent } from '@/components/Toast';
 import axios from 'axios';
-import React from 'react';
+import React, { useState } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { BiSolidSend } from 'react-icons/bi';
 import styles from './Contact.module.css';
@@ -22,14 +23,27 @@ export const ContactForm: React.FC = () => {
     reset,
   } = useForm<FormInputs>();
 
+  const [toastOpen, setToastOpen] = useState(false);
+  const [toastContent, setToastContent] = useState<ToastContent>({ title: '', description: '' });
+
+  const triggerToast = (toastContent: ToastContent) => {
+    setToastContent(toastContent);
+    setToastOpen(true);
+  };
+
   const onSubmit: SubmitHandler<FormInputs> = async (data) => {
     try {
-      const response = await axios.post('/api/contact', data);
-      // TODO : Show success toast
-      console.log(response.data);
+      await axios.post('/api/contact', data);
+      triggerToast({
+        title: '✅ Success',
+        description: 'Your message has been sent successfully',
+      });
       reset();
     } catch (error) {
-      // TODO : Show error toast
+      triggerToast({
+        title: '❌ Failure',
+        description: 'Your message failed to deliver, please contact me directly',
+      });
     }
   };
 
@@ -90,6 +104,8 @@ export const ContactForm: React.FC = () => {
       <Button type="submit" icon={<BiSolidSend />} variant="secondary">
         Send
       </Button>
+
+      <Toast {...toastContent} open={toastOpen} onOpenChange={setToastOpen} />
     </form>
   );
 };
