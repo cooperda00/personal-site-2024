@@ -74,23 +74,14 @@ export const TechnicalSkills = () => {
       <h2>Technical Skills</h2>
 
       <p>
-        My technical toolkit spans a wide range of modern web development technologies, enabling me
-        to build robust, scalable, and efficient full-stack applications.
+        My technical toolkit spans a wide range of modern web development technologies, with
+        Typescript at the core. This includes modern React-based meta frameworks like NextJS and
+        backend frameworks like NestJS.
       </p>
 
       <p>
-        On the front-end, I&apos;m proficient in HTML5, CSS3, and React, with expertise in state
-        management using Redux and styling with Sass and Styled Components. My back-end skills
-        include Node.js, NestJS, and NextJS, allowing me to create powerful server-side
-        applications. I use Typescript across the stack.
-      </p>
-
-      <p>
-        I&apos;m experienced with both SQL (PostgreSQL) and NoSQL (Cosmos DB) databases, as well as
-        cloud platforms like Firebase. For mobile development, I utilize Capacitor. My commitment to
-        quality is reflected in my use of testing frameworks such as Jest and Cypress, and I&apos;m
-        well-versed in Git for version control. Additionally, I have experience with GraphQL through
-        Apollo, and content management using Sanity.
+        I am familiar with multiple database technologies and can handle both SQL (PostgreSQL) and
+        NoSQL (Cosmos DB, Firestore), depending on the situation.
       </p>
 
       <p>

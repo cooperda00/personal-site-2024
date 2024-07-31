@@ -19,6 +19,7 @@
   --palette-gray-6: rgb(69, 69, 69);
 
   /* Typography */
+  --font-size-XXS: 1.2rem;
   --font-size-XS: 1.4rem;
   --font-size-VS: 1.5rem;
   --font-size-S: 1.8rem;

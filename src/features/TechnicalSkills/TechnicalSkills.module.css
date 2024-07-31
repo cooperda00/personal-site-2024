@@ -5,14 +5,22 @@
 }
 
 .skills > h2 {
-  font-size: var(--font-size-XL);
+  font-size: var(--font-size-L);
   padding-bottom: 1rem;
+
+  @media screen and (min-width: 700px) {
+    font-size: var(--font-size-XL);
+  }
 }
 
 .skills > p {
-  font-size: var(--font-size-SM);
+  font-size: var(--font-size-S);
   padding-bottom: 1rem;
   max-width: 80ch;
+
+  @media screen and (min-width: 700px) {
+    font-size: var(--font-size-SM);
+  }
 }
 
 .skills > p:last-of-type {

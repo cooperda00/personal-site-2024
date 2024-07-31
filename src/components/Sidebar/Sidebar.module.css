@@ -20,7 +20,7 @@
   justify-content: space-between;
   align-items: center;
   height: 100vh;
-  min-width: 7.5rem;
+  min-width: 9rem;
   width: 10vw;
   background: linear-gradient(
     to right,
@@ -28,7 +28,7 @@
     rgba(var(--palette-secondary-rgb), 0.25) 100%
   );
 
-  @media screen and (min-width: 360px) {
+  @media (min-width: 321px) {
     min-width: 10rem;
   }
 }
@@ -43,7 +43,7 @@
 
 .navItem {
   transition: text-shadow 0.2s ease;
-  font-size: var(--font-size-XS);
+  font-size: var(--font-size-XXS);
 
   &:hover {
     text-shadow: 0 0 1px var(--palette-gray-5);

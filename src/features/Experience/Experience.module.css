@@ -4,18 +4,22 @@
 }
 
 .experience > h2 {
-  font-size: var(--font-size-XL);
+  font-size: var(--font-size-L);
   padding-bottom: 1rem;
+
+  @media screen and (min-width: 700px) {
+    font-size: var(--font-size-XL);
+  }
 }
 
 .experience > p {
-  font-size: var(--font-size-SM);
+  font-size: var(--font-size-S);
   padding-bottom: 1rem;
   max-width: 80ch;
-}
 
-.experience p:last-of-type {
-  padding-bottom: 2rem;
+  @media screen and (min-width: 700px) {
+    font-size: var(--font-size-SM);
+  }
 }
 
 .experienceContainer {
@@ -30,12 +34,25 @@
   padding: 2rem;
   border-radius: 0.4rem;
   display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 5rem;
+  grid-template-columns: 1fr;
+  gap: 0;
+  justify-items: center;
+  align-items: center;
+
+  @media screen and (min-width: 700px) {
+    grid-template-columns: auto 1fr;
+    gap: 5rem;
+    justify-items: inherit;
+    align-items: inherit;
+  }
 }
 
 .experienceCard h2 {
-  font-size: var(--font-size-L);
+  font-size: var(--font-size-M);
+
+  @media screen and (min-width: 700px) {
+    font-size: var(--font-size-L);
+  }
 }
 
 .experienceCard a {
@@ -43,24 +60,41 @@
 }
 
 .experienceCard .role {
-  font-size: var(--font-size-SM);
+  font-size: var(--font-size-S);
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   padding-bottom: 1.6rem;
+
+  @media screen and (min-width: 700px) {
+    font-size: var(--font-size-SM);
+    flex-direction: row;
+  }
 }
 
 .experienceCard h3 {
-  font-size: var(--font-size-S);
+  font-size: var(--font-size-VS);
   padding-bottom: 0.8rem;
+
+  @media screen and (min-width: 700px) {
+    font-size: var(--font-size-S);
+  }
 }
 
 .experienceCard p,
 .experienceCard li {
-  font-size: var(--font-size-S);
-  padding-bottom: 0.4rem;
+  font-size: var(--font-size-VS);
+  padding-bottom: 0.8rem;
+
+  @media screen and (min-width: 700px) {
+    font-size: var(--font-size-S);
+    padding-bottom: 0.4rem;
+  }
 }
 
 .experienceCard ul {
-  list-style: outside;
+  @media screen and (min-width: 700px) {
+    list-style: outside;
+  }
 }

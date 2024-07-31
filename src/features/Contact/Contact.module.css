@@ -5,14 +5,22 @@
 }
 
 .contact > h2 {
-  font-size: var(--font-size-XL);
+  font-size: var(--font-size-L);
   padding-bottom: 1rem;
+
+  @media screen and (min-width: 700px) {
+    font-size: var(--font-size-XL);
+  }
 }
 
 .contact > p {
-  font-size: var(--font-size-SM);
+  font-size: var(--font-size-S);
   padding-bottom: 1rem;
   max-width: 80ch;
+
+  @media screen and (min-width: 700px) {
+    font-size: var(--font-size-SM);
+  }
 }
 
 .contact > p:last-of-type {
@@ -22,8 +30,13 @@
 .container {
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+
+  @media screen and (min-width: 700px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
 }
 
 .form {
@@ -40,7 +53,11 @@
 
 .formField label {
   font-weight: bold;
-  font-size: var(--font-size-S);
+  font-size: var(--font-size-XS);
+
+  @media screen and (min-width: 700px) {
+    font-size: var(--font-size-S);
+  }
 }
 
 .formField input,
@@ -48,15 +65,24 @@
   padding: 1rem;
   border: 1px solid var(--palette-gray-3);
   border-radius: 0.4rem;
-  font-size: var(--font-size-S);
-  margin-bottom: 3rem;
+  font-size: var(--font-size-XS);
+  margin-bottom: 2.6rem;
+
+  @media screen and (min-width: 700px) {
+    font-size: var(--font-size-S);
+    margin-bottom: 3rem;
+  }
 }
 
 .error {
   position: absolute;
   bottom: 0.5rem;
   color: var(--palette-error);
-  font-size: var(--font-size-XS);
+  font-size: var(--font-size-XXS);
+
+  @media screen and (min-width: 700px) {
+    font-size: var(--font-size-XS);
+  }
 }
 
 .contactDetails {
@@ -69,7 +95,11 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  font-size: var(--font-size-SM);
+  font-size: var(--font-size-S);
+
+  @media screen and (min-width: 700px) {
+    font-size: var(--font-size-SM);
+  }
 }
 
 .detail span {
