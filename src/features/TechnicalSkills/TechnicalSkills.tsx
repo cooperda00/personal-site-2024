@@ -1,6 +1,7 @@
-import { motion, useAnimation, useInView, Variants } from 'framer-motion';
+import { motion, useAnimation, Variants } from 'framer-motion';
 import Image from 'next/image';
 import { useEffect, useRef } from 'react';
+import { useInView } from 'react-intersection-observer';
 import styles from './TechnicalSkills.module.css';
 
 // TODO : js, graphql, ionic
@@ -60,14 +61,22 @@ const createVariants = (index: number): Variants => ({
 
 export const TechnicalSkills = () => {
   const controls = useAnimation();
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.2 });
+  // const ref = useRef(null);
+  // const isInView = useInView(ref, { once: true, amount: 0.2 });
+
+  const { ref, inView } = useInView({
+    /* Optional options */
+    threshold: 0,
+  });
+
+  const hasTriggered = useRef(false);
 
   useEffect(() => {
-    if (isInView) {
+    if (inView && !hasTriggered.current) {
       controls.start('visible');
+      hasTriggered.current = true;
     }
-  }, [isInView, controls]);
+  }, [inView, controls]);
 
   return (
     <section id="skills" className={styles.skills} ref={ref}>
