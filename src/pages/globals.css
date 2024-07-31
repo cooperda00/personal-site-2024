@@ -124,6 +124,10 @@ button {
   outline: none;
 }
 
+*:focus-visible {
+  outline: auto;
+}
+
 /* Override default input styles */
 input {
   background: none;
