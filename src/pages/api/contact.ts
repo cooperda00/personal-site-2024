@@ -17,11 +17,8 @@ const BodySchema = z.object({
   phoneNumber: z.string().max(0), // Honeypot field
 });
 
-type Body = z.infer<typeof BodySchema>;
-
 type ResponseData = {
   message: string;
-  body?: Omit<Body, 'phoneNumber'>; // TODO : remove after testing
 };
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse<ResponseData>) {
@@ -57,7 +54,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
       `,
     });
 
-    res.status(200).json({ message: 'Success', body: safeBody });
+    res.status(200).json({ message: 'Success' });
   } catch (error) {
     console.log(error);
     if (error instanceof z.ZodError) {
