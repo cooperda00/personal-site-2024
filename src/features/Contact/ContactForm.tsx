@@ -6,8 +6,6 @@ import { SubmitHandler, useForm } from 'react-hook-form';
 import { BiSolidSend } from 'react-icons/bi';
 import styles from './Contact.module.css';
 
-// TODO : focus styles across app
-
 type FormInputs = {
   name: string;
   email: string;
