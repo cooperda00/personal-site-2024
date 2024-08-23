@@ -8,7 +8,7 @@ imagePath: 'logo.svg'
 ---
 
 ## Sample Work : RP Financial Group
-July 2019
+_July 2019_
 
 Live Site: [rpfingroup.com](https://rpfingroup.com) | Code: [Github](https://github.com/cooperda00/rp-fin-group) 
 
@@ -21,15 +21,36 @@ Website for an Asia – Pacific based financial advisors’ group.
 
 &nbsp;
 
+## Side Project : CDK Translator
+_August 2024_
+
+Live Site: [CDK Translator](https://translate.danielcooper.io) | Code: [Github](https://github.com/cooperda00/cdk-translator)
+
+### Project Overview
+A Google Translate style app that translates text from one language to another using __Amazon Translate__.
+Built as a means to fill in some knowledge gaps.
+
+### Key Features & Technologies
+- Saves translations for viewing later
+- Optionally delete saved translations
+- IaC using __AWS CDK__
+- Backend business-logic using __Lambda__
+- __Cognito__ authentication
+- __DynamoDB__ as persistance layer
+- Frontend styles using __Tailwind__
+
+
+&nbsp;
+
 ## Side Project : Video Summariser
-August 2024
+_August 2024_
 
 Live Site: [Video Summariser](https://video-summariser-plum.vercel.app/) | Code: [Github](https://github.com/cooperda00/video-summariser)
 
 ### Project Overview
 Take any Youtube URL and generate a text summary of it, providing it has English captions.
 
-### Key Features
+### Key Features & Technologies
 - Robust Youtube URL validation
 - Returns transcript + summary
 - Summarises using __OpenAI API__
